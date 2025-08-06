@@ -1,0 +1,38 @@
+h1 {
+  color: mediumvioletred;
+  font-family: "Bitcount Grid Single", system-ui;
+}
+
+body {
+  font-family: "Bitcount Grid Single", system-ui;
+}
+p {
+  color: violet;
+  background-color: gold;
+}
+* {
+  color: royalblue;
+}
+h2 {
+  color: indianred;
+  font-family: "Special Elite", system-ui;
+}
+.blue-color {
+  color: purple;
+}
+
+#white {
+  color: aquamarine;
+}
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 38px;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  border: 10px dashed pink;
+}
