@@ -1,0 +1,95 @@
+section {
+  display: none;
+}
+
+/* Khi một liên kết được click, phần có ID tương ứng sẽ được hiển thị */
+section:target {
+  display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Màu nền cố định */
+  text-align: center;
+}
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #af8b8b;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#home-button {
+  /*change the home button color*/
+  background-color: #ff0000;
+  color: rgb(255, 240, 240); /* Màu chữ: trắng */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#answers-button {
+  /*change the home button color*/
+  background-color: #ff8800;
+  color: rgb(255, 240, 212); /* Màu chữ: trắng */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#inspo-button {
+  /*change the home button color*/
+  background-color: #ffd000;
+  color: rgb(155, 114, 1); /* Màu chữ: trắng */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#reference-button {
+  /*change the home button color*/
+  background-color: #fff700;
+  color: rgb(141, 90, 7); /* Màu chữ: trắng */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#inspo-button:hover {
+  /* changes when hover the mouse*/
+  background-color: #fff700;
+  color: rgb(186, 138, 4);
+}
+#reference-button:hover {
+  /* changes when hover the mouse*/
+  background-color: #fffdba;
+  color: rgb(201, 175, 3);
+}
+#answers-button:hover {
+  /* changes when hover the mouse*/
+  background-color: #ffd000;
+  color: rgb(155, 114, 1);
+}
+#home-button:hover {
+  /* changes when hover the mouse*/
+  background-color: #ff8800;
+  color: rgb(255, 240, 212);
+}
+.answer-container article {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  background-color: white;
+}
+.main-container {
+  /* Đặt chiều rộng của khối */
+  width: 80%;
+  /* hoặc có thể dùng giá trị cố định, ví dụ: max-width: 900px; */
+
+  /* Căn giữa khối theo chiều ngang */
+  margin: 0 auto;
+
+  /* Tạo kiểu dáng cho khối */
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Khi một liên kết được click, bài viết có ID tương ứng sẽ được hiển thị */
+.answer-container article:target {
+  display: block;
+}
