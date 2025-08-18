@@ -1,3 +1,33 @@
+.main-block {
+  /* I want to make a block behind so it would looks more like a folder */
+  position: fixed; /* I use fixed so it never can be moved when I scroll  */
+  width: 1500px;
+  height: 700px;
+  top: 53.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f80000; /* Màu nền mặc định */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
+  z-index: -1; /* Đặt khối ở lớp sau cùng */
+}
+
+#answers:target ~ .main-block {
+  /* change the color of the block when clicking to the answer section */
+  background-color: #ff8800;
+}
+#reference:target ~ .main-block {
+  background-color: #fff700;
+}
+#inspo:target ~ .main-block {
+  background-color: #ffd000;
+}
+
+/* Ẩn các sections vì chúng chỉ dùng để kích hoạt hiệu ứng */
+section {
+  display: none;
+}
+
 section {
   display: none;
 }
@@ -85,7 +115,7 @@ nav a {
   margin: 0 auto;
 
   /* Tạo kiểu dáng cho khối */
-  background-color: white;
+  background-color: rgb(180, 116, 116);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
