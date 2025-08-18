@@ -1,20 +1,131 @@
 .main-block {
   /* I want to make a block behind so it would looks more like a folder */
-  position: fixed; /* I use fixed so it never can be moved when I scroll  */
-  width: 1500px;
-  height: 700px;
-  top: 53.5%;
+  position: absolute; /* I use absolute so it will moved wiithe the folder's tags when I scroll  */
+  width: 1200px;
+  border-radius: 15px; /*to make looks more like folder shape*/
+  height: 4500px;
+  top: 305.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f80000; /* Màu nền mặc định */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
-  z-index: -1; /* Đặt khối ở lớp sau cùng */
+  background-color: #f88800; /* I chose orange because the answer mostly in this section , answers is the main sec */
+  transition: background-color 0.5s ease; /* to change bg colour when clicked */
+  z-index: -1; /* to arrange the box on the furthest layer */
+}
+
+.qlist {
+  /*change style by naming classes*/
+  list-style-type: none;
+  /* I want to reduce the dots before every lines */
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  text-align: justify; /* this makes text more balance*/
+  width: 50%;
+  padding: 15px; /*make it has more spaces around*/
+  margin: 0 auto; /* to align text in the middle*/
+  color: rgb(86, 43, 0);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+
+.zoom {
+  background-color: rgb(255, 166, 0);
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0 auto;
+  flex: 21;
+  flex-wrap: wrap;
+}
+
+#sketch {
+  background-color: rgb(255, 196, 0);
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0 auto;
+  flex: 21;
+  flex-wrap: wrap;
+}
+
+.ytube {
+  background-color: rgb(255, 166, 0);
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0 auto;
+  flex: 21;
+  flex-wrap: wrap;
+}
+
+img {
+  border-radius: 10px; /* make all imgs border curvy so it would be more accurate with the concept*/
+}
+
+.angles {
+  background-color: rgb(255, 166, 0);
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0 auto;
+  flex: 3;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  background-color: rgb(255, 166, 0);
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0 auto;
+  flex: 21;
+  flex-wrap: wrap;
+}
+
+.reflist {
+  text-align: justify;
+  margin: 0 auto;
+  gap: 15px;
+  max-width: 1000px;
+}
+
+/*change text style such as headings and paragragh*/
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 600%;
+  color: rgb(246, 242, 20);
+}
+
+h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xxx-large;
+  color: rgb(107, 58, 1);
+}
+
+h3 {
+  font-family: fantasy;
+  font-size: larger;
+  color: rgb(107, 58, 1);
+}
+
+h4 {
+  font-family: "Courier New", Courier, monospace;
 }
 
 #answers:target ~ .main-block {
   /* change the color of the block when clicking to the answer section */
   background-color: #ff8800;
+}
+#home:target ~ .main-block {
+  background-color: #ff5100;
 }
 #reference:target ~ .main-block {
   background-color: #fff700;
@@ -23,82 +134,91 @@
   background-color: #ffd000;
 }
 
-/* Ẩn các sections vì chúng chỉ dùng để kích hoạt hiệu ứng */
 section {
+  /* Hide sections because them jus used for animation */
   display: none;
 }
 
-section {
-  display: none;
-}
-
-/* Khi một liên kết được click, phần có ID tương ứng sẽ được hiển thị */
+/* When a link is clicked, the corresponding ID will be displayed. */
 section:target {
   display: block;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Màu nền cố định */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #4fcdff; /* the most behind bg colour */
   text-align: center;
 }
+
 nav a {
   display: inline-block;
   padding: 10px 20px;
   margin: 10px;
-  background-color: #af8b8b;
+  max-width: 36%; /* the answer list would be more balancing arrange*/
+  background-color: #ec7803;
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
 }
+
 #home-button {
-  /*change the home button color*/
-  background-color: #ff0000;
-  color: rgb(255, 240, 240); /* Màu chữ: trắng */
+  /*change the home button attributes*/
+  background-color: #ff5100;
+  color: rgb(255, 240, 240);
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 #answers-button {
-  /*change the home button color*/
   background-color: #ff8800;
-  color: rgb(255, 240, 212); /* Màu chữ: trắng */
+  color: rgb(255, 240, 212);
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 #inspo-button {
-  /*change the home button color*/
   background-color: #ffd000;
-  color: rgb(155, 114, 1); /* Màu chữ: trắng */
+  color: rgb(155, 114, 1);
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 #reference-button {
-  /*change the home button color*/
   background-color: #fff700;
-  color: rgb(141, 90, 7); /* Màu chữ: trắng */
+  color: rgb(141, 90, 7);
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 #inspo-button:hover {
   /* changes when hover the mouse*/
   background-color: #fff700;
   color: rgb(186, 138, 4);
+  scale: 120%;
 }
+
 #reference-button:hover {
   /* changes when hover the mouse*/
   background-color: #fffdba;
   color: rgb(201, 175, 3);
+  scale: 120%;
 }
+
 #answers-button:hover {
   /* changes when hover the mouse*/
   background-color: #ffd000;
   color: rgb(155, 114, 1);
+  scale: 120%;
 }
+
 #home-button:hover {
   /* changes when hover the mouse*/
   background-color: #ff8800;
   color: rgb(255, 240, 212);
+  scale: 120%;
 }
+
 .answer-container article {
   display: none;
   padding: 20px;
@@ -106,20 +226,11 @@ nav a {
   margin-top: 20px;
   background-color: white;
 }
+
 .main-container {
-  /* Đặt chiều rộng của khối */
   width: 80%;
-  /* hoặc có thể dùng giá trị cố định, ví dụ: max-width: 900px; */
-
-  /* Căn giữa khối theo chiều ngang */
   margin: 0 auto;
-
-  /* Tạo kiểu dáng cho khối */
   background-color: rgb(180, 116, 116);
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-/* Khi một liên kết được click, bài viết có ID tương ứng sẽ được hiển thị */
-.answer-container article:target {
-  display: block;
+  box-shadow: 0 4px 8px rgba(128, 87, 87, 0.1);
 }

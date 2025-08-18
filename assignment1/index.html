@@ -5,80 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My first Assignment</title>
     <link rel="stylesheet" href="style1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Passion+One:wght@400;700;900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <nav>
+      <!-- create different section using a tag -->
+ <!-- I use nav to when you click to the section it will navigate to the particular content-->
       <a href="#home" id="home-button">home</a>
       <a href="#answers" id="answers-button">answers</a>
       <a href="#inspo" id="inspo-button">inspo</a>
       <a href="#reference" id="reference-button">references</a>
     </nav>
+
     <section id="answers">
       <h2>Answer list</h2>
       <nav class="answers-nav">
-        <ul>
+        <!-- I use nav to when you click to the question it will navigate to the answer by name different a tags and name them with diff ids-->
+          <ul class="qlist"> 
+   <!-- I want to make it in a list form so it will endline after each box -->
+         <li>
           <a href="#q1"
             >1. What was the first thing you paid attention to when interacting
             with the experience?
           </a>
+          </li>
+           <li>
           <a href="#q2"
             >2. Spend two minutes with the experience and create a list of each
             of your discrete actions.
           </a>
+           </li>
+          <li>
           <a href="#q3"
             >3. What part of the experience did you spend the most time engaging
             with?
           </a>
-
+          </li>
+          <li>
           <a href="#q4"
             >4. What was the most common action in your two minute interaction
             with the experience?
           </a>
-
+          </li>
+          <li>
           <a href="#q5"
             >5. What is your impression of the intended primary goal of the
             interactive experience?
           </a>
-
+          </li>
+          <li>
           <a href="#q6"
             >6. How does the interactive experience communicate this primary
             goal?
           </a>
-
+          </li>
+          <li>
           <a href="#q7"
             >7. What is your impression of how the experience should be
             interacted with over time?
           </a>
-
+          </li>
+          <li>
           <a href="#q8"
             >8. How does the interactive experience communicate how it should be
             interacted with over time?
           </a>
-
+          </li>
           <a href="#q9"
             >9. What other media forms (digital or otherwise) does the
             experience reference?
           </a>
-
+          <li>
           <a href="#q10"
             >10. What does this reference/s communicate to you about how you
             should act when engaging with your research experience?
           </a>
-
+          </li>
+          <li>
           <a href="#q11"
             >11. What does this reference/s communicate to you about how you
             should feel when engaging with your research experience?
           </a>
-
+          </li>
+          <li>
           <a href="#q12"
             >12. What is the most frustrating part of the interaction to you and
             what makes that part frustrating?
           </a>
-
+          </li>
+          <li>
           <a href="#q13"
             >13. What is the most satisfying part of the interaction to you and
             what makes that part satisfying?
           </a>
+          </li>
         </ul>
       </nav>
     </section>
@@ -89,6 +112,7 @@
           1. What was the first thing you paid attention to when interacting
           with the experience?
         </h3>
+        <img src="Screenshot 2025-08-18 at 4.42.25 pm.png" width= "80%" height="100%" />
         <p>
           The first thing I paid attention to was the abstract image of the
           building or artwork. This, along with the bright and warm colors of
@@ -97,6 +121,8 @@
           this one presented nothing but an abstract image, which immediately
           piqued my interest.
         </p>
+        <a href="#q2" class="next-button">Next Question</a> 
+        <!-- this to navigate to next ques by adding the id of the next question -->
       </section>
 
       <section id="q2">
@@ -104,27 +130,58 @@
           2. Spend two minutes with the experience and create a list of each of
           your discrete actions.
         </h3>
-        <p>
-          I clicked on the blank space as instructed to begin the experience. I
-          observed the main abstract image and text appear, interacting by
-          hovering to reveal information about the artist's thoughts. I started
-          scrolling, which triggered the image of the architect to appear. As I
-          continued to scroll, the camera zoomed in on the architecture, and
-          descriptions appeared like subtitles. I continued to scroll to see the
-          image change angles and zoom in and out. I kept scrolling to see a
-          video montage and an article about the building's history. I clicked
-          on buttons to navigate horizontally to new pages. I watched a video
-          explaining the design process and the sound engineering inside the
-          building. I scrolled to see a montage of people playing music and
-          enjoying the space. Finally, I scrolled to the end to find the "sales"
-          section and the credits. .
-        </p>
+        
+        <img src="Screenshot 2025-08-16 at 8.09.58 pm.png" width= "50%" height="auto"/>
+        <p>I clicked on the blank space as instructed to begin the experience. </p>
+        <img src="Screenshot 2025-08-05 at 10.22.38 pm copy.png" width= "50%" height="auto"/>
+        <p>I observed the main abstract image and text appear, interacting by
+          hovering to reveal information about the artist's thoughts. </p>
+          <img src="Screenshot 2025-08-18 at 8.06.30 pm.png" width= "50%" height="auto"/>
+        <p>I started scrolling, which triggered the image of the architect to appear. </p>
+        <div class="zoom">
+        <img src="Screenshot 2025-08-18 at 8.10.06 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.16 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.26 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.34 pm.png" width= "45%" height="auto"/>
+        </div>
+        <p>As I continued to scroll, the camera zoomed in on the architecture, and
+          descriptions appeared like subtitles. </p>
+        <p>I continued to scroll to see the image change angles and zoom in and out.</p>
+        <div class="angles">
+        <img src="Screenshot 2025-08-18 at 8.26.31 pm.png" width= "50%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.06 pm.png" width= "45%" height="auto"/>
+        </div>
+        <p>I kept scrolling to see a video montage and an article about the building's history. </p>
+        <img src="Screenshot 2025-08-18 at 8.31.33 pm.png" width= "50%" height="50%"/>
+        <p>I clicked on buttons to navigate horizontally to new pages. </p>
+        <div class="zoom">
+        <img src="Screenshot 2025-08-18 at 8.35.36 pm.png" width= "70%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.40.18 pm.png" width= "25%" height="auto"/>
+        </div>
+        <p>I watched a video explaining the design process and the section of sound engineering inside the
+          building. </p>
+        <img src="Screenshot 2025-08-18 at 9.25.27 pm.png" width= "58%" height="58%"/>
+        <p> I scrolled as I see a montage of people playing music and
+          and they trying to recreate the atmosphere of the space.</p>
+        <div class="angles">
+        <img src="Screenshot 2025-08-18 at 8.10.06 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 9.28.47 pm.png" width= "45%" height="auto"/>
+        </div>
+        <p>Finally, it zoom out with the same scrolling interaction, I scrolled to the end to find the "sales"
+          section and the credits. .</p>
+           <img src="Screenshot 2025-08-18 at 9.47.00 pm.png" width= "50%" height="50%"/>
+        <p>Throughout the process of this, therre will be classical music playing in the background and there is this button, you can turn on or of the music. Next to it is the menu button so can go to a particular section if wanted</p>
+        <a href="#q1" class="next-button">Last Question</a> 
+        <a href="#q3" class="next-button">Next Question</a> 
+        <!-- I also add like a button to go back to last question -->
       </section>
+
       <section id="q3">
         <h3>
           3. What part of the experience did you spend the most time engaging
           with?
         </h3>
+        <img src="Screenshot 2025-08-18 at 9.36.45 pm.png" width= "50%" height="50%"/>
         <p>
           I spent the most time on the first page where I hover my mouse and
           there are some words appear, it seems random at first but it is
@@ -132,24 +189,41 @@
           quite interesting to hover around to read these. It also looks like a
           pentool that leaves a footprint/mark after your path.
         </p>
+        <a href="#q2" class="next-button">Last Question</a> 
+        <a href="#q4" class="next-button">Next Question</a> 
       </section>
+
       <section id="q4">
         <h3>
           4. What was the most common action in your two minute interaction with
           the experience?
         </h3>
+        <div class="zoom">
+        <img src="Screenshot 2025-08-18 at 8.10.06 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.16 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.26 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.34 pm.png" width= "45%" height="auto"/>
+        </div>
+        <p>
         <p>
           The most common action was scrolling. The entire experience is driven
           by this single interaction. I just scrolled, and the animations and
-          movements appeared in a cinematic fashion, similar to watching a film,
+          movements appeared in a movie, similar to watching a film,
           as the website provided a lot of video content and dynamic
           descriptions.
         </p>
+        <a href="#q3" class="next-button">Last Question</a> 
+        <a href="#q5" class="next-button">Next Question</a> 
       </section>
+
       <section id="q5">
         <h3>
           5. What is your impression of the intended primary goal of the
           interactive experience?
+<div class="zoom">
+          <img src="Screenshot 2025-08-18 at 9.59.02 pm.png" width= "45%" height="auto"/>
+          <img src="Screenshot 2025-08-05 at 10.22.38 pm copy.png" width= "45%" height="auto"/>
+</div>
         </h3>
         <p>
           I think the primary goal is to provide a comprehensive introduction to
@@ -159,41 +233,63 @@
           spend time trying to understand the meaning behind the abstract form
           before discovering the full context.
         </p>
+        <a href="#q4" class="next-button">Last Question</a> 
+        <a href="#q6" class="next-button">Next Question</a> 
       </section>
+
       <section id="q6">
         <h3>
           6. How does the interactive experience communicate this primary goal?
         </h3>
+        <div class="zoom">
+          <img src="Screenshot 2025-08-18 at 8.06.30 pm.png" width= "45%" height="auto"/>
+          <img src="Screenshot 2025-08-18 at 10.07.33 pm.png" width= "45%" height="auto"/>
+          <img src="Screenshot 2025-08-18 at 10.08.30 pm.png" width= "45%" height="auto"/>
+          <img src="Screenshot 2025-08-18 at 10.10.26 pm.png" width= "45%" height="auto"/>
+        </div>
         <p>
           Throughout the journey of navigating the website, every single element
-          and interaction, especially the media like pictures or videos—are
+          and interaction, especially the media like pictures or videos are
           related to the primary goal, constantly reminding me about the
-          building. Even the abstract images are about the main element,
+          building. </p>
+          <div class="zoom">
+          <img src="Screenshot 2025-08-18 at 9.59.02 pm.png" width= "45%" height="auto"/>
+          <img src="Screenshot 2025-08-05 at 10.22.38 pm copy.png" width= "45%" height="auto"/>
+          </div>
+          <p>
+          Even the abstract images are about the main element,
           especially the match-cut part, which is the best. It makes the
           experience feel more meaningful, and people will remember it longer
           because in the beginning they don't know what the abstract picture is,
           and when they find out through the match cut, they will remember it
           longer
         </p>
+        <a href="#q5" class="next-button">Last Question</a> 
+        <a href="#q7" class="next-button">Next Question</a> 
       </section>
+
       <section id="q7">
         <h3>
           7. What is your impression of how the experience should be interacted
           with over time?
         </h3>
         <p>
-          I think the experience is designed to make the audience feel the
+          I think the experience is designed to make the audience feel immersice that they feel the
           experience of being in that building in a specific way and it has to
           be interesting enough to keep users continuing to discover the
           website. It is not meant to be a long experience if it is complicated,
           but it is a short one if it is simple and interesting.
         </p>
+        <a href="#q6" class="next-button">Last Question</a> 
+        <a href="#q8" class="next-button">Next Question</a> 
       </section>
+
       <section id="q8">
         <h3>
           8. How does the interactive experience communicate how it should be
           interacted with over time?
         </h3>
+        <img src="192824b2cf4523dc66b8b3f626dc4dd6.gif" width= "50%" height="50%"/>
         <p>
           The experience communicates how it should be interacted with through
           its intuitive and simple navigation. It is designed to be interesting
@@ -203,12 +299,19 @@
           clear that the user should continue forward along the single-path
           narrative.
         </p>
+        <a href="#q7" class="next-button">Last Question</a> 
+        <a href="#q9" class="next-button">Next Question</a> 
       </section>
+
       <section id="q9">
         <h3>
           9. What other media forms (digital or otherwise) does the experience
           reference?
         </h3>
+        <div>
+          <img src="Screenshot 2025-08-18 at 11.08.31 pm.png" width= "50%" height="50%"/>
+          <img src="Screenshot 2025-08-18 at 9.47.00 pm.png" width= "50%" height="50%"/>
+          </div>
         <p>
           The experience references various media forms, including images, video
           (with multiple embedded clips), and sound/music. It also incorporates
@@ -216,31 +319,43 @@
           presents them in a way that feels like a cinematic documentary.
           cinematic documentary.
         </p>
+        <a href="#q8" class="next-button">Last Question</a> 
+        <a href="#q10" class="next-button">Next Question</a> 
       </section>
+
       <section id="q10">
         <h3>
           10. What does this reference/s communicate to you about how you should
           act when engaging with your research experience?
         </h3>
+        <img src="Screenshot 2025-08-18 at 10.07.33 pm.png" width= "50%" height="50%" />
+        
         <p>
           The elements are all related to the main subject, which is the
-          architect. They constantly remind me about the architect through the
+          Walt Disney Hall. They constantly remind me about the Hall (main element) through the
           immersive experience, so after leaving the webpage, I am already very
-          sure about what the webpage is about. Visuals: They show evidence and
-          make the experience less boring than if there were just words. This
+          sure about what the webpage is about. </p>
+
+          <p>Visuals: They show evidence and make the experience less boring than if there were just words like the movement of the camera angles and the animation and the audience just need to scroll by mouse. This
           helps me identify which sections I might want to read more about
           instead of having to read everything. It also keeps people focused on
-          the need to keep scrolling. Sound: The music is not too loud or
+          the need to keep scrolling. </p>
+<img src="Screenshot 2025-08-18 at 9.25.27 pm.png" width= "50%" height="50%"/>
+          <p>Sound: The music is not too loud or
           disturbing but somehow makes me concentrate well. I think this is
           because it is a classical music piece with no lyrics, so it merges
-          well with the visuals and the content.
+          well with the visuals and the content.</p>
         </p>
+        <a href="#q9" class="next-button">Last Question</a> 
+        <a href="#q11" class="next-button">Next Question</a> 
       </section>
+
       <section id="q11">
         <h3>
           11. What does this reference/s communicate to you about how you should
           feel when engaging with your research experience?
         </h3>
+        <img src="Screenshot 2025-08-18 at 9.25.27 pm.png" width= "50%" height="50%" />
         <p>
           The references are intended to make me feel calm and intellectually
           engaged. The classical music establishes a peaceful and sophisticated
@@ -248,18 +363,25 @@
           I am in a focused state, ready to absorb the content without
           distraction.
         </p>
+        <a href="#q10" class="next-button">Last Question</a> 
+        <a href="#q12" class="next-button">Next Question</a> 
       </section>
+
       <section id="q12">
         <h3>
           12. What is the most frustrating part of the interaction to you and
           what makes that part frustrating?
         </h3>
+        <img src="Screenshot 2025-08-18 at 4.42.25 pm.png" width= "50%" height="50%" />
         <p>
           The most frustrating part I think is always the first part when I
           first encounter the web, and it shows this abstract image which I have
           no idea about. I have to find out by myself by clicking around and
-          trying to interact in different ways to see the content. It was too
-          long even though I tried to see the table of contents. Some parts are
+          trying to interact in different ways to see the content. </p>
+
+          <img src="Screenshot 2025-08-18 at 10.24.07 pm.png" width= "50%" height="50%" />
+
+          <p>The length was too long even though I tried to see the table of contents. Some parts are
           way too long that I cannot start in the middle of the content, but I
           have to start over again. It's getting boring over time because it
           mostly just has one interaction. My hand got a bit tired because I had
@@ -267,12 +389,20 @@
           throughout the process. I had to scroll it smoothly so the transitions
           and animations would play smoothly.
         </p>
+        <a href="#q11" class="next-button">Last Question</a> 
+        <a href="#q13" class="next-button">Next Question</a> 
       </section>
+
       <section id="q13">
         <h3>
           13. What is the most satisfying part of the interaction to you and
           what makes that part satisfying?
         </h3>
+        <div class="zoom">
+        <img src="Screenshot 2025-08-18 at 8.10.16 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 9.25.27 pm.png" width= "45%" height="auto"/>
+        <img src="Screenshot 2025-08-18 at 8.10.34 pm.png" width= "45%" height="auto"/>
+        </div>
         <p>
           I love how they deliver this to the audience in a way that makes it
           feel like an experience of watching a movie or a show rather than
@@ -281,12 +411,13 @@
           musical show by having this classical music. The animation of zooming
           in and out of the building is so smart and interesting to watch.Z
         </p>
+        <a href="#q12" class="next-button">Last Question</a>  
       </section>
     </div>
 
     <section id="home">
       <h1>Assignment 1</h1>
-      <p>by Thuy An Ngo</p>
+      <h4>by Thuy An Ngo</h4>
     </section>
 
     <section id="answers">
@@ -296,22 +427,57 @@
     <section id="inspo">
       <h2>Inspiration</h2>
       <h3>Moodboard</h3>
-      <img src="" alt="shinning mirror" />
+      <div class="gallery">
+        <!-- I make a flexbox so of images so in css I will arrange them to make like a board -->
+        <img src="ad272d4bd6f017f85a7c8c4b57a85b5e.jpg" width= "40%" height="auto"/>
+        <img src="759a7e8f7c1699675f43ac8dc59e7b5f.jpg" width= "40%" height="auto"/>
+        <img src="3cfc9fac6c4b40a60bae02ccc4e3fce7.jpg" width= "40%" height="auto"/>
+        <img src="2e16830b2da5f17500d65e01f0a99ce5.jpg" width= "40%" height="auto"/>
+      </div>
       <p>
         I collect some pictures that I get the inspiration to make this website.
         I think I like the concept to make the website like a folder
       </p>
       <h3>Plan</h3>
-      <img src="Untitled_Artwork 5.png" width="700" height="500" />
+      <img src="Untitled_Artwork 5.png" id="sketch" />
+      <!-- I make backgrounf foe image by add id and change in css -->
       <p>
         These are some picture that I make a plan from those inspiration I
         found. That I want to make a small website by the concept of foler as
         the main concept.
       </p>
+      <h3>How</h3>
+      <div class="ytube">
+        <!-- I make a flexbox to include 2 youtube vids I watched in a horizontal way -->
+         <iframe width="420" height="315"
+src="https://www.youtube.com/embed/uu0lOX6Ot3s?si=PBYU4q3wyiYifXA8">
+</iframe>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+      </div>
+      <p>To make this, despite just only applying what I have learnt in class,
+        these Youtube videos and w3s helped me alot in making this small
+        website.
+      </p>
     </section>
 
     <section id="reference">
       <h2>Reference list</h2>
+<div class="reflist "> 
+<!-- I make div class so after I can rearange the list to the left -->
+<!-- I make a clickable links so people can click to see the links -->
+<li>Bro Code (2023) How to create a CSS image gallery in 5 minutes! 📷 [Online video] Available at: <a href="http://www.youtube.com/watch?v=uu0lOX6Ot3s">http://www.youtube.com/watch?v=uu0lOX6Ot3s</a> (Accessed: 18 August 2025).</li>
+
+<li>nhduong1978 (n.d.) Pins [Pinterest] Available at: <a href="https://www.pinterest.com/nhduong1978/_pins/">https://www.pinterest.com/nhduong1978/_pins/</a>(Accessed: 18 August 2025).
+
+<li>SuperSimpleDev (2022) HTML & CSS Full Course - Beginner to Pro [Online video] Available at: <a href="http://www.youtube.com/watch?v=G3e-cpL7ofc">http://www.youtube.com/watch?v=G3e-cpL7ofc/</a>(Accessed: 18 August 2025).</li>
+
+<li>The Getty Research Institute (n.d.) Frank Gehry [Online] Available at:  <a href="https://gehry.getty.edu/">https://gehry.getty.edu/</a>(Accessed: 18 August 2025).</li>
+
+<li> W3Schools (n.d.) HTML Links [Online] Available at: <a href="https://www.w3schools.com/html/html_links.asp">https://www.w3schools.com/html/html_links.asp</a>(Accessed: 18 August 2025). </li>
+
+</div>
     </section>
     <div class="main-block"></div>
   </body>
