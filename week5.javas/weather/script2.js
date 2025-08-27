@@ -22,3 +22,5 @@ function checkWeather() {
     body.style.backgroundColor = "black";
   }
 }
+
+let a = 10;
