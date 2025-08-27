@@ -7,6 +7,16 @@ topHeading.style.color = "red"; //changing style jus by calling n change?
 const firstPara = document.querySelector("p");
 console.log(firstPara);
 console.log(firstPara.textContent);
+firstPara.textContent = "This is new par";
+firstPara.innerHTML += <span>"New element"</span>;
+
+const mySelection = document.querySelector("section");
+console.log(mySelection);
+let mynewContent =
+<h2>this is an img of cat</h2>
+<p>Do u like it?</p>;
+mySelection.innerHTML += mynewContent;
+const h2Heading = document.querySelector(#)
 
 const h2Heading = document.querySelector("#second-heading");
 console.log(h2Heading);

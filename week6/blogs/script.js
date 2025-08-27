@@ -50,6 +50,4 @@ const gridContainer = document.querySelector("#grid-container");
 console.log(gridContainer);
 
 let newContent = "";
-for (let i = 0; i < blogPosts.length; i++) {
-  console.log(blogPosts[i].author);
-}
+for (let i = 0; i < blogPosts.length; i++) console.log(blogPosts[i].author);
