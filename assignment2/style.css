@@ -66,16 +66,8 @@ body {
   margin-left: 0;
 }
 
-a {
-  color: #fff8e3;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: rgb(0, 0, 0);
-  transition: ease 0.2s;
+.icon:hover {
+  cursor: pointer;
 }
 
 /* edit font and alignment */
@@ -235,4 +227,20 @@ a:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.playlist ol li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.playlist ol li.inactive {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.track-name {
+  width: 55%;
+  height: 20%;
 }

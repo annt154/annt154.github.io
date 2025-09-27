@@ -94,3 +94,10 @@ backwardButton.addEventListener("click", () => {
   setMusic(currentMusic);
   playMusic();
 });
+// ////////////////
+
+function changeSong(index) {
+  playButton.classList.remove("pause");
+  disk.classList.add("play");
+  music;
+}
