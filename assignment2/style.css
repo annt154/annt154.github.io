@@ -75,6 +75,20 @@ body {
   margin-left: 0;
 }
 
+h2 {
+}
+
+.track-name {
+  width: 999px;
+  height: 450px;
+  border-radius: 20px;
+  background: hsl(329, 100%, 82%);
+  box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  overflow: z;
+  color: #fff8e3;
+}
+
 .icon:hover {
   cursor: pointer;
 }
