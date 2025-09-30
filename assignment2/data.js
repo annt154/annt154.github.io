@@ -1,4 +1,5 @@
 let songs = [
+  // a list of songs and info to map with the template in html
   {
     name: "DryDown",
     path: "p-hase_Dry-Down-feat-Ben-Snaath.mp3",

@@ -4,14 +4,22 @@
   box-sizing: border-box;
 } /* apply for whole page */
 
+header {
+  /* styling header*/
+  color: #fff8e3;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+
 body {
+  /* styling body*/
   width: 100vw;
   height: 100vh;
   margin: 0;
-  display: flex;
+  display: flex; /* Use flex for vertical layout */
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Center content horizontally */
   background: hsl(329, 100%, 81%);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -52,6 +60,7 @@ body {
 }
 
 .playlist {
+  /* styling playlist sec*/
   width: 400px;
   height: 550px;
   border-radius: 20px;
@@ -81,6 +90,7 @@ body {
 }
 
 .disk {
+  /* editing the spinning sec */
   position: relative;
   display: block;
   margin: 40px auto;
@@ -89,18 +99,20 @@ body {
   border-radius: 50%;
   background-image: url("images/cover\ 1.jpg");
   background-size: cover;
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
-  animation: rotate 20s linear infinite;
-  animation-play-state: paused;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08); /* thin shad for the disk */
+  animation: rotate 20s linear infinite; /* animate rotation for the disk */
+  animation-play-state: paused; /* the default play state off the disk is pausing */
 }
 
 .disk.play {
+  /* Spin when playing */
   animation-play-state: running;
 }
 
 .disk::before {
-  content: "";
-  position: absolute;
+  /* Center dot of the disk in the center */
+  content: ""; /* Generate pseudo element */
+  position: absolute; /* Absolute inside .disk */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -111,12 +123,13 @@ body {
 }
 
 .song-slider {
+  /* styling seekbar + time labels */
   width: 100%;
   position: relative;
 }
 
 .seek-bar {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Remove default WebKit look */
   width: 100%;
   height: 5px;
   border-radius: 10px;
@@ -163,6 +176,7 @@ body {
 }
 
 .play-button span {
+  /* Bars used to form icons */
   position: absolute;
   top: 50%;
   left: 25%;
@@ -176,6 +190,7 @@ body {
 }
 
 .play-button span:nth-child(2) {
+  /* Second bar position */
   left: 55%;
   transform-origin: center;
 }
@@ -185,6 +200,7 @@ body {
 }
 
 .play-button.pause span:nth-child(1) {
+  /* Turn first bar into triangle */
   width: 35%;
   left: 53%;
   transform: translate(-50%, -50%);
@@ -197,6 +213,7 @@ body {
 }
 
 @keyframes pulse {
+  /* Keyframes for play butt  */
   0% {
     box-shadow: 0;
   }
@@ -220,7 +237,12 @@ body {
   cursor: pointer;
 }
 
+a {
+  color: #fff8e3;
+}
+
 @keyframes rotate {
+  /* rotate animate */
   0% {
     transform: rotate(0);
   }
@@ -230,17 +252,38 @@ body {
 }
 
 .playlist ol li {
-  cursor: pointer;
+  cursor: pointer; /* Clickable */
   margin-bottom: 10px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Smooth hover */
 }
 
 .playlist ol li.inactive {
-  opacity: 0.4;
+  /* Currently playing track */
+  opacity: 0.4; /* visible range */
   pointer-events: none;
 }
 
 .track-name {
   width: 55%;
   height: 20%;
+}
+/* styling when hover in a song in playlist, the opacity change*/
+.playlist ol li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease, font-weight 0.3s ease;
+
+  opacity: 0.5;
+  font-weight: normal;
+}
+
+.playlist ol li.active-track {
+  opacity: 1 !important;
+  font-weight: bold;
+  color: #fffaae;
+  text-decoration: underline;
+}
+
+.playlist ol li:not(.active-track):hover {
+  opacity: 1;
 }

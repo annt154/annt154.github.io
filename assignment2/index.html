@@ -4,74 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Album</title>
-    <!-- add the font family of your choice -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     
   </head>
   <body>
+      <!-- make id for audio to map in jvscrpt -->
       <audio src="" id="audio"></audio>
+
     <!-- Header Section -->
     <header>
       <h1>Music Album</h1>
     </header>
     
     <!-- Navigation Section -->
-  <div class="main">
+  <div class="main"> 
     <nav class="nav-bar">
       <img class="icon" src="home-icon.png"/>
       <img class="icon" src="music-icon.png"/>
       <img class="icon" src="playlist-icon.png"/>
     </nav>
 
-    <!-- Main Content Section -->
+    <!-- Main Content Section: media player sec-->
     <main class="container">
       <!-- Media Player Section -->
-    
+    <!-- create a template to map the song to -->
       <div class="music-player">
         <h1 class="music-name">song one</h1>
         <p class="artist-name">artist</p>
-
+    <!-- a div section for the disk spinning -->
         <div class="disk"></div>
 
-     <div class="song-slider">
+     <div class="song-slider"> <!-- a section for seekbar -->
      <input type="range" value="0" class="seek-bar">
+     <!--Displays played time/total duration-->
      <span class="current-time">00:00</span>
      <span class="song-duration">00:00</span>
       </div>
 
-      <div class="controls">
+      <div class="controls"> <!-- set up play/pause button -->
         <button class="button backward-button"><img src="2.png" alt=""></button>
         <button class="play-button pause">
           <span></span>
           <span></span>
         </button>
         <button class="button forward-button"><img src="3.png" alt=""></button>
+        <button class="button mute-button">
+          <img src="volume-up.png" alt="Volume" id="volume-icon">
+        </button>
       </div>
       </main>
 
       <!-- Playlist section -->
       <div class = playlist>
-        <h2>Playlist</h2>
+        <h2>Playlist</h2> <!-- Making list of songs -->
           <ol>
-            <li onclick="changeSong(0)" class="track-name">DryDown</li>
-            <li onclick="changeSong(1)" class="track-name">Hes</li>
-            <li onclick="changeSong(2)" class="track-name">Leapt</li>
-            <li onclick="changeSong(3)" class="track-name">Water Feature</li>
+            <li class="track-name" data-index="0">DryDown</li>
+            <li class="track-name" data-index="1">Hes</li>
+            <li class="track-name" data-index="2">Leapt</li>
+            <li class="track-name" data-index="3">Water Feature</li>
           </ol>
       </div>
   </div> 
 
     <!-- Footer Section -->
-    <footer>
+    <footer> <!-- a footer to show what I used for the web -->
       <p>&copy; 2024 Media Player Website. All rights reserved.</p> </div>
       <a href="https://icons8.com/icon/59862/play">Play</a> icon by
       <a href="https://icons8.com">Icons8</a>
       <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
       <a href="https://icons8.com">Icons8</a>
-      <a href="h9c51ecca9d9c891ea757919d51958f60.jpg">Icons8</a>
-  
+      <a href="h9c51ecca9d9c891ea757919d51958f60.jpg">Icons8</a> images by
+      <a href="https://www.pinterest.com/nhduong1978/pins/">Image4</a>
+      <a href="https://www.pinterest.com/pin/754493743866012140/">Image5</a>
+      <a href="https://www.pinterest.com/pin/754493743866004210/">Image1</a>
+       <a href="https://www.pinterest.com/pin/754493743866012431/">Image6</a>
     </footer>
+
     <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
