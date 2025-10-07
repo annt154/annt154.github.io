@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dress up game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Dress Up Game</h1>
+
+      <div class="game-area">
+        <!-- Left Wardrobe -->
+        <div class="wardrobe-section">
+          <h2>Hair</h2>
+
+          <div class="clothing-category">
+            <div class="category-label">Kiểu Tóc</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hair"
+                data-color="#4a3728"
+              >
+                <div
+                  class="color-sample"
+                  style="background: #4a3728; border-radius: 50% 50% 0 0"
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hair"
+                data-color="#f4e4c1"
+              >
+                <div
+                  class="color-sample"
+                  style="background: #f4e4c1; border-radius: 50% 50% 0 0"
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hair"
+                data-color="#1a1a1a"
+              >
+                <div
+                  class="color-sample"
+                  style="background: #1a1a1a; border-radius: 50% 50% 0 0"
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hair"
+                data-color="#c41e3a"
+              >
+                <div
+                  class="color-sample"
+                  style="background: #c41e3a; border-radius: 50% 50% 0 0"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clothing-category">
+            <div class="category-label">Mũ</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hat"
+                data-emoji="🎩"
+              >
+                🎩
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hat"
+                data-emoji="👑"
+              >
+                👑
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hat"
+                data-emoji="🧢"
+              >
+                🧢
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="hat"
+                data-emoji="🎀"
+              >
+                🎀
+              </div>
+            </div>
+          </div>
+
+          <div class="clothing-category">
+            <div class="category-label">Áo</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="top"
+                data-color="#ffb3d9"
+              >
+                <div class="color-sample" style="background: #ffb3d9"></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="top"
+                data-color="#87ceeb"
+              >
+                <div class="color-sample" style="background: #87ceeb"></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="top"
+                data-color="#ffffff; border: 2px solid #000;"
+              >
+                <div
+                  class="color-sample"
+                  style="background: white; border: 2px solid #333"
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="top"
+                data-color="#98d8c8"
+              >
+                <div class="color-sample" style="background: #98d8c8"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Character Area -->
+        <div class="character-area" id="characterZone">
+          <div class="character-container">
+            <div class="character-base">
+              <svg viewBox="0 0 200 450" xmlns="http://www.w3.org/2000/svg">
+                <!-- Head -->
+                <circle
+                  cx="100"
+                  cy="50"
+                  r="35"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                />
+
+                <!-- Eyes -->
+                <circle cx="90" cy="45" r="5" fill="#333" />
+                <circle cx="110" cy="45" r="5" fill="#333" />
+                <circle cx="91" cy="44" r="2" fill="#fff" />
+                <circle cx="111" cy="44" r="2" fill="#fff" />
+
+                <!-- Nose -->
+                <line
+                  x1="100"
+                  y1="50"
+                  x2="100"
+                  y2="55"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+
+                <!-- Mouth -->
+                <path
+                  d="M 95 60 Q 100 63 105 60"
+                  stroke="#333"
+                  stroke-width="2"
+                  fill="none"
+                />
+
+                <!-- Neck -->
+                <rect
+                  x="90"
+                  y="80"
+                  width="20"
+                  height="25"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                />
+
+                <!-- Body -->
+                <rect
+                  x="70"
+                  y="105"
+                  width="60"
+                  height="80"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                  rx="10"
+                />
+
+                <!-- Arms -->
+                <rect
+                  x="50"
+                  y="110"
+                  width="20"
+                  height="70"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                  rx="8"
+                />
+                <rect
+                  x="130"
+                  y="110"
+                  width="20"
+                  height="70"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                  rx="8"
+                />
+
+                <!-- Legs -->
+                <rect
+                  x="75"
+                  y="185"
+                  width="20"
+                  height="100"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                  rx="8"
+                />
+                <rect
+                  x="105"
+                  y="185"
+                  width="20"
+                  height="100"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                  rx="8"
+                />
+
+                <!-- Feet -->
+                <ellipse
+                  cx="85"
+                  cy="290"
+                  rx="15"
+                  ry="8"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                />
+                <ellipse
+                  cx="115"
+                  cy="290"
+                  rx="15"
+                  ry="8"
+                  fill="#ffd7ba"
+                  stroke="#333"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="worn-items-layer" id="wornItems"></div>
+          </div>
+        </div>
+
+        <!-- Right Wardrobe -->
+        <div class="wardrobe-section">
+          <h2>👗 Quần & Váy</h2>
+
+          <div class="clothing-category">
+            <div class="category-label">Quần</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="bottom"
+                data-color="#4169e1"
+              >
+                <div class="color-sample" style="background: #4169e1"></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="bottom"
+                data-color="#1a1a1a"
+              >
+                <div class="color-sample" style="background: #1a1a1a"></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="bottom"
+                data-color="#d4a5d4"
+              >
+                <div class="color-sample" style="background: #d4a5d4"></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="bottom"
+                data-color="#f0e68c"
+              >
+                <div class="color-sample" style="background: #f0e68c"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clothing-category">
+            <div class="category-label">Váy</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="dress"
+                data-color="#e6b3ff"
+              >
+                <div
+                  class="color-sample"
+                  style="
+                    background: #e6b3ff;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                  "
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="dress"
+                data-color="#ffb3ba"
+              >
+                <div
+                  class="color-sample"
+                  style="
+                    background: #ffb3ba;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                  "
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="dress"
+                data-color="#bae1ff"
+              >
+                <div
+                  class="color-sample"
+                  style="
+                    background: #bae1ff;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                  "
+                ></div>
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="dress"
+                data-color="#ffffba"
+              >
+                <div
+                  class="color-sample"
+                  style="
+                    background: #ffffba;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clothing-category">
+            <div class="category-label">Giày</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="shoes"
+                data-emoji="👟"
+              >
+                👟
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="shoes"
+                data-emoji="👠"
+              >
+                👠
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="shoes"
+                data-emoji="🥾"
+              >
+                🥾
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="shoes"
+                data-emoji="👢"
+              >
+                👢
+              </div>
+            </div>
+          </div>
+
+          <div class="clothing-category">
+            <div class="category-label">Phụ Kiện</div>
+            <div class="clothing-grid">
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="accessory"
+                data-emoji="👓"
+              >
+                👓
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="accessory"
+                data-emoji="🕶️"
+              >
+                🕶️
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="accessory"
+                data-emoji="🎒"
+              >
+                🎒
+              </div>
+              <div
+                class="clothing-item"
+                draggable="true"
+                data-type="accessory"
+                data-emoji="👜"
+              >
+                👜
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" onclick="resetOutfit()">Delete All</button>
+        <button class="btn" onclick="randomOutfit()">Random Fit</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
