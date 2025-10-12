@@ -8,6 +8,12 @@ let history = []; // Lưu lịch sử các action để Back
 window.onload = function () {
   setupDrag(); // Thiết lập drag & drop
 };
+let play = document.getElementById("play");
+function playMusic() {
+  let audio = new Audio("p-hase_Leapt.mp3");
+  audio.play();
+}
+play.addEventListener(playMusic);
 
 // ==========================================
 // THIẾT LẬP DRAG & DROP
