@@ -5,360 +5,165 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
-  min-height: 100vh;
+  background: #f5f5dc;
   padding: 20px;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.game-container {
+.container {
   max-width: 1400px;
   margin: 0 auto;
   background: white;
-  border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 }
 
 h1 {
   text-align: center;
-  color: #ff6b9d;
-  font-size: 2.5em;
+  color: #ff69b4;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.game-area {
+/* Layout: Trái - Giữa - Phải */
+.game-layout {
   display: flex;
   gap: 30px;
-  align-items: flex-start;
-}
-
-.left-section {
-  display: flex;
-  gap: 20px;
-  flex: 1;
-}
-
-.character-section {
-  flex-shrink: 0;
-}
-
-.right-section {
-  display: flex;
-  gap: 20px;
-  flex: 1;
-}
-
-.wardrobe-section {
-  background: #fff5f5;
-  border-radius: 15px;
-  padding: 15px;
-  border: 3px solid #ffb3c1;
-  flex: 1;
-  min-width: 200px;
-}
-
-.wardrobe-section h2 {
-  color: #ff6b9d;
-  margin-bottom: 15px;
-  font-size: 1.1em;
-  text-align: center;
-}
-
-.clothing-category {
-  margin-bottom: 15px;
-}
-
-.category-label {
-  font-weight: bold;
-  color: #666;
-  font-size: 0.8em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.clothing-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
-
-.clothing-item {
-  background: white;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 5px;
-  cursor: grab;
-  transition: all 0.3s;
-  position: relative;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+/* Cột trái & phải: chứa các nhóm ảnh */
+.side {
+  width: 280px;
+}
+
+/* Mỗi nhóm (hair, tops, pants, v.v.) */
+.group {
+  margin-bottom: 30px; /* Khoảng cách giữa các nhóm */
+}
+
+/* Tiêu đề nhóm (nhỏ, nhẹ nhàng) */
+.group-title {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Grid ảnh trong mỗi nhóm */
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột */
+  gap: 10px;
+}
+
+/* Mỗi item (ô vuông chứa ảnh) */
+.item {
+  aspect-ratio: 1; /* Hình vuông */
+  border: 1px solid #ddd;
+  border-radius: 8px;
   overflow: hidden;
+  cursor: grab;
+  background: white;
+  transition: all 0.2s;
 }
 
-.clothing-item:hover {
-  transform: scale(1.05);
-  border-color: #ff6b9d;
-  box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+.item:hover {
+  transform: scale(1.1);
+  border-color: #ff69b4;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
 }
 
-.clothing-item.dragging {
-  opacity: 0.5;
+.item:active {
   cursor: grabbing;
 }
 
-.clothing-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   pointer-events: none;
 }
 
-/* Placeholder styling when no image */
-.clothing-item .placeholder {
-  width: 100%;
-  height: 100%;
-  background: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7em;
-  color: #999;
-  text-align: center;
-  border-radius: 8px;
-  border: 2px dashed #ccc;
-}
-
-.character-area {
-  background: linear-gradient(180deg, #fff 0%, #ffe6f0 100%);
+/* Canvas - khu vực thả ảnh */
+.canvas {
+  width: 500px;
+  height: 600px;
+  background: #fffaf0;
+  border: 2px solid #ffb6c1;
   border-radius: 15px;
-  border: 3px dashed #ffb3c1;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  min-width: 400px;
-  min-height: 600px;
-}
-
-.character-area.drag-over {
-  background: #fff0f6;
-  border-color: #ff6b9d;
-  border-style: solid;
-}
-
-.character-container {
-  position: relative;
-  width: 350px;
-  height: 550px;
-}
-
-.character-base {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  height: 500px;
-  z-index: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.character-base img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-/* Placeholder for character base */
-.character-base .placeholder {
-  width: 200px;
-  height: 400px;
-  background: #f8f8f8;
-  border: 3px dashed #ddd;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #999;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-.worn-items-layer {
+/* Ảnh nhân vật chính */
+.character-main {
+  max-width: 80%;
+  max-height: 90%;
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 0; /* Nằm dưới tất cả đồ */
+  pointer-events: none; /* Không chặn drag & drop */
+}
+
+/* Ảnh đã drop vào canvas */
+.dropped-img {
+  position: absolute;
+  cursor: move;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+
+.dropped-img:hover {
+  border-color: #ff69b4;
+}
+
+.dropped-img img {
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
 
-.worn-item {
+/* Nút X */
+.dropped-img .remove {
   position: absolute;
-  animation: popIn 0.3s ease-out;
-  cursor: pointer;
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.worn-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.worn-item .remove-btn {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #ff4757;
+  top: -10px;
+  right: -10px;
+  background: red;
   color: white;
   border: none;
-  border-radius: 50%;
   width: 24px;
   height: 24px;
+  border-radius: 50%;
   cursor: pointer;
   font-size: 14px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
   font-weight: bold;
+  display: none;
 }
 
-.worn-item:hover .remove-btn {
-  display: flex;
+.dropped-img:hover .remove {
+  display: block;
 }
 
-@keyframes popIn {
-  from {
-    transform: scale(0) rotate(180deg);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-.controls {
+/* Button */
+.buttons {
   text-align: center;
-  margin-top: 30px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
+  margin-top: 20px;
 }
 
 .btn {
-  background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%);
+  background: #ff69b4;
   color: white;
   border: none;
-  padding: 15px 30px;
+  padding: 12px 30px;
   border-radius: 25px;
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  margin: 0 8px;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-}
-
-/* Positioning for different clothing types */
-/* VỊ TRÍ CỦA CÁC LOẠI ĐỒ TRÊN NHÂN VẬT */
-.worn-item.hair {
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 65%;
-  height: 35%;
-  z-index: 10;
-}
-
-.worn-item.hat {
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 25%;
-  z-index: 11;
-}
-
-.worn-item.top {
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 30%;
-  z-index: 5;
-}
-
-.worn-item.bottom {
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 55%;
-  height: 35%;
-  z-index: 4;
-}
-
-.worn-item.shoes {
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 20%;
-  z-index: 3;
-}
-
-.worn-item.accessory {
-  top: 25%;
-  right: 5%;
-  width: 25%;
-  height: 20%;
-  z-index: 8;
-}
-
-.worn-item.dress {
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 55%;
-  z-index: 5;
-}
-
-@media (max-width: 1200px) {
-  .game-area {
-    flex-direction: column;
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%;
-  }
-
-  .character-area {
-    min-width: 100%;
-  }
+  background: #ff1493;
 }

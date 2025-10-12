@@ -8,323 +8,176 @@
     <title>Dress up game</title>
   </head>
   <body>
-    <div class="game-container">
-      <h1>Dress Up Game</h1>
-      <div class="game-area">
-        <!-- Left Section -->
-        <div class="left-section">
-          <!-- HAIR WARDROBE -->
-          <div class="wardrobe-section">
-            <h2>Hair</h2>
-            <div class="clothing-category">
-              <div class="clothing-grid">
-                <!-- GẮN HÌNH ẢNH TÓC CỦA BẠN VÀO data-src -->
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="hair"
-                  data-src="images/hair1.png"
-                >
-                  <div class="placeholder">Hair 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="hair"
-                  data-src="img/hair1.png"
-                >
-                  <div class="placeholder">Hair 2</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="hair"
-                  data-src="images/hair3.png"
-                >
-                  <div class="placeholder">Hair 3</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="hair"
-                  data-src="images/hair4.png"
-                >
-                  <div class="placeholder">Hair 4</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TOPS WARDROBE -->
-          <div class="wardrobe-section">
-            <h2>Tops</h2>
-            <div class="clothing-category">
-              <div class="clothing-grid">
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="top"
-                  data-src="images/top1.png"
-                >
-                  <div class="placeholder">Top 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="top"
-                  data-src="images/top2.png"
-                >
-                  <div class="placeholder">Top 2</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="top"
-                  data-src="images/top3.png"
-                >
-                  <div class="placeholder">Top 3</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="top"
-                  data-src="images/top4.png"
-                >
-                  <div class="placeholder">Top 4</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="top"
-                  data-src="images/top5.png"
-                >
-                  <div class="placeholder">Top 5</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="top"
-                  data-src="images/top6.png"
-                >
-                  <div class="placeholder">Top 6</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- BOTTOMS WARDROBE -->
-          <div class="wardrobe-section">
-            <h2>Bottoms</h2>
-            <div class="clothing-category">
-              <div class="clothing-grid">
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="bottom"
-                  data-src="images/bottom1.png"
-                >
-                  <div class="placeholder">Bottom 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="bottom"
-                  data-src="images/bottom2.png"
-                >
-                  <div class="placeholder">Bottom 2</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="bottom"
-                  data-src="images/bottom3.png"
-                >
-                  <div class="placeholder">Bottom 3</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="bottom"
-                  data-src="images/bottom4.png"
-                >
-                  <div class="placeholder">Bottom 4</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="bottom"
-                  data-src="images/bottom5.png"
-                >
-                  <div class="placeholder">Bottom 5</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="bottom"
-                  data-src="images/bottom6.png"
-                >
-                  <div class="placeholder">Bottom 6</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Character Area -->
-        <div class="character-section">
-          <div class="character-area" id="characterZone">
-            <div class="character-container">
-              <div class="character-base">
-                <!-- GẮN HÌNH NHÂN VẬT CHÍNH VÀO ĐÂY -->
-                <img
-                  id="characterBaseImg"
-                  src="img/figure.png"
-                  alt="Character Base"
-                  style="display: none"
-                />
-                <div class="placeholder">
-                  Character Base<br />
-                  (add your character image)
-                </div>
-              </div>
-              <div class="worn-items-layer" id="wornItems"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Section -->
-        <div class="right-section">
-          <!-- DRESSES WARDROBE -->
-          <div class="wardrobe-section">
-            <h2>Dress</h2>
-            <div class="clothing-category">
-              <div class="clothing-grid">
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="dress"
-                  data-src="images/dress1.png"
-                >
-                  <div class="placeholder">Dress 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="dress"
-                  data-src="images/dress2.png"
-                >
-                  <div class="placeholder">Dress 2</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="dress"
-                  data-src="images/dress3.png"
-                >
-                  <div class="placeholder">Dress 3</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="dress"
-                  data-src="images/dress4.png"
-                >
-                  <div class="placeholder">Dress 4</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- SHOES WARDROBE -->
-          <div class="wardrobe-section">
-            <h2>Shoes</h2>
-            <div class="clothing-category">
-              <div class="clothing-grid">
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="shoes"
-                  data-src="images/shoes1.png"
-                >
-                  <div class="placeholder">Shoes 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="shoes"
-                  data-src="images/shoes2.png"
-                >
-                  <div class="placeholder">Shoes 2</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="shoes"
-                  data-src="images/shoes3.png"
-                >
-                  <div class="placeholder">Shoes 3</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="shoes"
-                  data-src="images/shoes4.png"
-                >
-                  <div class="placeholder">Shoes 4</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACCESSORIES WARDROBE -->
-          <div class="wardrobe-section">
-            <h2>ACCESSORIES</h2>
-            <div class="clothing-category">
-              <div class="category-label">Hats & Accessories</div>
-              <div class="clothing-grid">
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="hat"
-                  data-src="images/hat1.png"
-                >
-                  <div class="placeholder">Hat 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="hat"
-                  data-src="images/hat2.png"
-                >
-                  <div class="placeholder">Hat 2</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="accessory"
-                  data-src="images/accessory1.png"
-                >
-                  <div class="placeholder">Accessory 1</div>
-                </div>
-                <div
-                  class="clothing-item"
-                  draggable="true"
-                  data-type="accessory"
-                  data-src="images/accessory2.png"
-                >
-                  <div class="placeholder">Accessory 2</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="controls">
-        <button class="btn" onclick="resetOutfit()">🔄 Reset</button>
-        <button class="btn" onclick="randomOutfit()">🎲 Random Outfit</button>
-      </div>
+<div class="container">
+  <h1> Dress Up Game </h1>
+  <div class="game-layout">
+<!-- ========== CỘT TRÁI ========== -->
+  <div class="side">
+    <!-- NHÓM 1: HAIR -->
+    <div class="group">
+    <div class="group-title">Hair</div>
+    <div class="items">
+    <!-- 
+    data-x, data-y: vị trí cố định khi drop vào canvas (px)
+    data-width, data-height: kích thước khi drop (px)
+    Bạn có thể thay đổi các giá trị này cho từng ảnh
+    -->
+    <div class="item" draggable="true" data-x="163" data-y="24" data-width="150" data-height="150">
+      <img src="img/hair1.PNG" alt="">
     </div>
+    <div class="item" draggable="true" data-x="175" data-y="17" data-width="130" data-height="150">
+      <img src="img/hair2.PNG" alt="">
+    </div>
+    <div class="item" draggable="true" data-x="175" data-y="13" data-width="130" data-height="140">
+      <img src="img/hair3.PNG" alt="">
+    </div>
+    <div class="item" draggable="true" data-x="170" data-y="14" data-width="135" data-height="140">
+      <img src="img/hair4.PNG" alt="">
+    </div>
+    <div class="item" draggable="true" data-x="168" data-y="11" data-width="150" data-height="150">
+      <img src="img/hair5.PNG" alt="">
+    </div>
+                    </div>
+                </div>
+
+                <!-- TOPS -->
+                <div class="group">
+                    <div class="group-title">Tops</div>
+                    <div class="items">
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/top1.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/top2.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/top3.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/top4.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/top5.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/top6.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOMS -->
+                <div class="group">
+                    <div class="group-title">Bottoms</div>
+                    <div class="items">
+                        <div class="item" draggable="true" data-x="140" data-y="200" data-width="230" data-height="330">
+                            <img src="img/bottom1.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="143" data-y="194" data-width="220" data-height="330">
+                            <img src="img/bottom2.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="143" data-y="201" data-width="220" data-height="330">
+                            <img src="img/bottom3.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="143" data-y="201" data-width="220" data-height="330">
+                            <img src="img/bottom4.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="143" data-y="201" data-width="220" data-height="330">
+                            <img src="img/bottom5.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CỘT GIỮA: CANVAS ========== -->
+            <!-- Kéo ảnh vào đây -->
+            <div class="canvas" id="canvas">
+                <!-- NHÂN VẬT CHÍNH: Thay src="" thành đường dẫn ảnh nhân vật của bạn -->
+                <img src="img/figure.PNG" alt="Character" class="character-main" id="characterMain">
+            </div>
+
+            <!-- ========== CỘT PHẢI ========== -->
+            <div class="side">
+      <!-- ACC -->
+                <div class="group">
+                    <div class="group-title">ACCESSORIES</div>
+                    <div class="items">
+                        <div class="item" draggable="true" data-x="130" data-y="60" data-width="230" data-height="280">
+                            <img src="img/acc1.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="130" data-y="60" data-width="230" data-height="280">
+                            <img src="img/acc2.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="130" data-y="60" data-width="230" data-height="280">
+                            <img src="img/acc3.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="130" data-y="60" data-width="230" data-height="280">
+                            <img src="img/acc4.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- DRESSES -->
+                <div class="group">
+                    <div class="group-title">Dresses</div>
+                    <div class="items">
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/out1.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/out2.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/out3.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/out4.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="128" data-y="50" data-width="240" data-height="340">
+                            <img src="img/out5.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHOES -->
+                <div class="group">
+                    <div class="group-title">Shoes</div>
+                    <div class="items">
+                        <div class="item" draggable="true" data-x="161" data-y="380" data-width="200" data-height="230">
+                            <img src="img/shoes1.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="161" data-y="380" data-width="200" data-height="230">
+                            <img src="img/shoes2.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="161" data-y="380" data-width="200" data-height="230">
+                            <img src="img/shoes3.PNG" alt="">
+                        </div>
+                        <div class="item" draggable="true" data-x="161" data-y="380" data-width="200" data-height="230">
+                            <img src="img/shoes4.PNG" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="buttons">
+            <button class="btn" onclick="goBack()">⬅️ Back</button>
+            <button class="btn" onclick="clearCanvas()">🔄 Clear All</button>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer> <!-- a footer to show what I used for the web -->
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p> </div>
+      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="h9c51ecca9d9c891ea757919d51958f60.jpg">Icons8</a> images by
+      <a href="https://www.pinterest.com/nhduong1978/pins/">Image4</a>
+      <a href="https://www.pinterest.com/pin/754493743866012140/">Image5</a>
+      <a href="https://www.pinterest.com/pin/754493743866004210/">Image1</a>
+       <a href="https://www.pinterest.com/pin/754493743866012431/">Image6</a>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
