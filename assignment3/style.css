@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* base body styling */
 body {
   background: #f5f5dc;
   padding: 20px;
@@ -13,71 +14,72 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  background: white;
+  background: rgb(255, 246, 246);
   padding: 30px;
   border-radius: 15px;
 }
 
+/* Title styling */
 h1 {
   text-align: center;
   color: #ff69b4;
   margin-bottom: 30px;
 }
 
-/* Layout: Trái - Giữa - Phải */
+/* Layout */
 .game-layout {
   display: flex;
   gap: 30px;
   justify-content: center;
 }
 
-/* Cột trái & phải: chứa các nhóm ảnh */
+/* This is for the side pannels included items*/
 .side {
-  width: 280px;
+  width: 350px;
 }
 
-/* Mỗi nhóm (hair, tops, pants, v.v.) */
+/* styling the container for each item category */
 .group {
-  margin-bottom: 30px; /* Khoảng cách giữa các nhóm */
+  margin-bottom: 23px; /* space in between groups */
 }
 
-/* Tiêu đề nhóm (nhỏ, nhẹ nhàng) */
+/* styling the group title, so for each group/catagory of clothes, there gonna be a title so the player will know what is that and maybe not redrag again. */
 .group-title {
   font-size: 12px;
-  color: #999;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
-/* Grid ảnh trong mỗi nhóm */
+/* Grid layout for items within each group */
 .items {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr); /* 4 cột */
   gap: 10px;
 }
 
-/* Mỗi item (ô vuông chứa ảnh) */
+/* Each draggable item container/box styling */
 .item {
-  aspect-ratio: 1; /* Hình vuông */
-  border: 1px solid #ddd;
+  border: 1px;
   border-radius: 8px;
-  overflow: hidden;
   cursor: grab;
-  background: white;
   transition: all 0.2s;
 }
 
+/* Hover effect so when hovering to a particular item on the side bar, the size gonna change so enhancing interaction experience */
 .item:hover {
   transform: scale(1.1);
   border-color: #ff69b4;
   box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
 }
 
+/* Visual feedback when dragging */
 .item:active {
   cursor: grabbing;
 }
 
+/* styling the image inside the item container */
 .item img {
   width: 100%;
   height: 100%;
@@ -85,7 +87,7 @@ h1 {
   pointer-events: none;
 }
 
-/* Canvas - khu vực thả ảnh */
+/* Canvas/ droping item area */
 .canvas {
   width: 500px;
   height: 600px;
@@ -99,16 +101,16 @@ h1 {
   justify-content: center;
 }
 
-/* Ảnh nhân vật chính */
+/* main figure */
 .character-main {
   max-width: 80%;
   max-height: 90%;
   position: absolute;
-  z-index: 0; /* Nằm dưới tất cả đồ */
-  pointer-events: none; /* Không chặn drag & drop */
+  z-index: 0; /* set to 0 to make sure it always laying underneath all of the items */
+  pointer-events: none; /* Does not block drag & drop events on the canvas */
 }
 
-/* Ảnh đã drop vào canvas */
+/* Dropped image container on the canvas */
 .dropped-img {
   position: absolute;
   cursor: move;
@@ -116,17 +118,18 @@ h1 {
   transition: border 0.2s;
 }
 
+/* Hover effect on dropped items, so when hover to a particular item display on the canvas/dropped items, it gonna show boder */
 .dropped-img:hover {
   border-color: #ff69b4;
 }
 
+/* Image inside the dropped container */
 .dropped-img img {
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
-
-/* Nút X */
+/* X button */
 .dropped-img .remove {
   position: absolute;
   top: -10px;
@@ -143,27 +146,101 @@ h1 {
   display: none;
 }
 
-.dropped-img:hover .remove {
-  display: block;
+/* styling the X button on the side pannels */
+.item {
+  position: relative; /* Cần có để đặt nút X */
 }
 
-/* Button */
-.buttons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.btn {
-  background: #ff69b4;
+.item .remove-item {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
   color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
   cursor: pointer;
-  margin: 0 8px;
+  font-size: 12px;
+  font-weight: bold;
+  display: none; /* hide the default template */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  z-index: 20; /* Ensure it's on top */
+  transition: all 0.2s;
+}
+
+/* Display the 'X' button only when the item has been used */
+.item.used .remove-item {
+  display: flex;
+}
+
+.item.used {
+  opacity: 0.5; /* lower the opacity of used items like marking it as used */
+  position: relative;
+}
+
+/* Hover effect for the X button */
+.remove-item:hover {
+  transform: scale(1.2) rotate(90deg);
+  background: #ff1744;
+}
+
+/* General styling for Back and Reset buttons */
+.btn {
+  background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%);
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 10px; /* spacing around the img */
 }
 
 .btn:hover {
   background: #ff1493;
+  /*  styling when hovering these buttons */
+}
+
+/* Music button styling */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%);
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+  transition: all 0.3s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* spacing around the img */
+}
+
+/* Image inside the music button */
+.music-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keep the og size of the imgs */
+  pointer-events: none;
+}
+
+/* styling hover and active effects for the music button */
+.music-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.6);
+}
+
+.music-btn:active {
+  transform: scale(0.95);
+}
+
+/* styling when the music is muted */
+.music-btn.muted {
+  background: linear-gradient(135deg, #999 0%, #ccc 100%);
+  opacity: 0.7;
 }
